@@ -11,7 +11,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serversCreation = 'No server was created!';
-  serverName = 'test serv'
+  serverName = 'Test server name';
+  newName = '';
 
   constructor() {
     setTimeout(() => {
@@ -29,4 +30,18 @@ export class ServersComponent implements OnInit {
   onUpdateServerName(event: any) {
     this.serverName = event.target.value;
   }
+
+
+
+
+
+
+
+  // onUpdateNewUserName(updateNewName: any) {
+  //   if (updateNewName.target.value.size > 0) {
+  //     // this.allowNewName = true;
+  //   }
+  //
+  // }
+
 }

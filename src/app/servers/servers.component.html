@@ -2,7 +2,7 @@
 <input
   type="text"
   class="form-control"
-  (input)="onUpdateServerName($event)"> only one direction communication
+  (input)="onUpdateServerName($event)"> <!--only one direction communication-->
 <input
   type="text"
   class="form-control"
@@ -17,14 +17,37 @@
 <!--  (click)="serversCreation='serber has been created.'" >Add Server</button>--><!--directly we can put logic in code like this-->
 <!--<p [innerText]="allowNewServer"></p>-->
 <br>
-<p>{{serversCreation}}</p>
+<p>{{serversCreation}} </p>
+<hr>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="newName"
+>
+
+<p>
+  <label>{{newName}}</label>
+</p><hr>
+
+
+<button
+  class="btn btn-primary"
+  [disabled]="newName === ''"
+  (click)="newName=''"
+  >Reset name
+</button>
+<hr>
+
+
+
+
 
 
 <!--<h1>
   it's SERVERS components
-</h1>
+</h1>-->
 <hr>
-<app-server></app-server>
-<app-server></app-server>-->
+<!--<app-server></app-server>-->
+<!--<app-server></app-server>-->
 <!--<app-warming-alerts></app-warming-alerts>-->
 <!--<app-success-alert></app-success-alert>-->
