@@ -1,8 +1,8 @@
 <label>Server Name</label>
-<input
-  type="text"
-  class="form-control"
-  (input)="onUpdateServerName($event)"> <!--only one direction communication-->
+<!--<input-->
+<!--  type="text"-->
+<!--  class="form-control"-->
+<!--  (input)="onUpdateServerName($event)"> &lt;!&ndash;only one direction communication&ndash;&gt;-->
 <input
   type="text"
   class="form-control"
@@ -17,25 +17,25 @@
 <!--  (click)="serversCreation='serber has been created.'" >Add Server</button>--><!--directly we can put logic in code like this-->
 <!--<p [innerText]="allowNewServer"></p>-->
 <br>
-<p>{{serversCreation}} </p>
+<p *ngIf="serverCreated">Server NAME is: {{serversCreation}}</p>
 <hr>
-<input
-  type="text"
-  class="form-control"
-  [(ngModel)]="newName"
->
+<!--<input-->
+<!--  type="text"-->
+<!--  class="form-control"-->
+<!--  [(ngModel)]="newName"-->
+<!--&gt;-->
 
-<p>
-  <label>{{newName}}</label>
-</p><hr>
+<!--<p>-->
+<!--  <label>{{newName}}</label>-->
+<!--</p><hr>-->
 
 
-<button
-  class="btn btn-primary"
-  [disabled]="newName === ''"
-  (click)="newName=''"
-  >Reset name
-</button>
+<!--<button-->
+<!--  class="btn btn-primary"-->
+<!--  [disabled]="newName === ''"-->
+<!--  (click)="newName=''"-->
+<!--  >Reset name-->
+<!--</button>-->
 <hr>
 
 
@@ -47,7 +47,7 @@
   it's SERVERS components
 </h1>-->
 <hr>
-<!--<app-server></app-server>-->
+<app-server *ngFor="let server of servers"></app-server>
 <!--<app-server></app-server>-->
 <!--<app-warming-alerts></app-warming-alerts>-->
 <!--<app-success-alert></app-success-alert>-->
