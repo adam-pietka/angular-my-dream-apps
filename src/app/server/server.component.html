@@ -1,7 +1,15 @@
-<p> The One server component</p>
+<!--<p> The One server component</p>-->
+<!--<div>-->
+<!-- <p [ngStyle]="{backgroundColor: getColor()}"-->
+<!-- [ngClass]="{online: serverStatus=== 'online'}">-->
+<!--  {{ 'Server' }} with id: {{serverId}}, is {{getServerStatus()}}.-->
+<!-- </p>-->
+<!--</div>-->
+
 <div>
- <p [ngStyle]="{backgroundColor: getColor()}"
- [ngClass]="{online: serverStatus=== 'online'}">
-  {{ 'Server' }} with id: {{serverId}}, is {{getServerStatus()}}.
- </p>
+  <p [ngStyle]="{backgroundColor: getColor()}"
+     [ngClass]="{online: serverStatus === 'online'}"
+  >
+    {{'Server' }} with id: {{serverId}}, is {{serverStatus}}.
+  </p>
 </div>

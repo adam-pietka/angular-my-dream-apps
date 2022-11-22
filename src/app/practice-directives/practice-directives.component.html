@@ -1,0 +1,21 @@
+<p>practice-directives works!</p>
+<ol>
+  <li class="done-class">add a button says 'Display details' </li>
+  <li class="done-class">Add a paragraph with any contend of gou choise (e.g. 'Secret password sushi')</li>
+  <li class="done-class">toggle the displaing of paragraph with the button create a firs step and hide after next click</li>
+  <li class="done-class">Log all butto clicks in an array and output them below secret paragraph with incriment number</li>
+  <li>if log item is over 5 change backround to blue and forn to white</li>
+</ol>
+<hr>
+<button
+  class="btn-primary"
+  (click)="onClick()">Dispaly details</button>
+
+<p *ngIf="showPassword">Secret password is Sushi</p>
+
+<p>click counter is: {{logCounter}}</p>
+
+<p *ngFor="let logsItems of logArray"
+   [ngStyle]="{backgroundColor: logCounter >= 5 ? 'blue': 'transparent'}"
+   [ngClass]="{'over-five-logitems': logCounter >=5}"
+   >Log id: {{ logArray }}</p>

@@ -17,7 +17,7 @@
 <!--  (click)="serversCreation='serber has been created.'" >Add Server</button>--><!--directly we can put logic in code like this-->
 <!--<p [innerText]="allowNewServer"></p>-->
 <br>
-<p *ngIf="serverCreated">Server NAME is: {{serversCreation}}</p>
+<p *ngIf="serverCreated">Server name is: {{serverName}}</p>
 <hr>
 <!--<input-->
 <!--  type="text"-->
@@ -38,16 +38,11 @@
 <!--</button>-->
 <hr>
 
-
-
-
-
-
 <!--<h1>
   it's SERVERS components
 </h1>-->
 <hr>
-<app-server *ngFor="let server of servers"></app-server>
+<app-server *ngFor="let serverAdded of servers"></app-server>
 <!--<app-server></app-server>-->
 <!--<app-warming-alerts></app-warming-alerts>-->
 <!--<app-success-alert></app-success-alert>-->

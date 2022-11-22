@@ -15,6 +15,9 @@ export class ServersComponent implements OnInit {
   newName = '';
   serverCreated = false;
   servers = ['Testserver', 'Testserver 2']
+  clickCounter = 0;
+  logItem = [];
+  showSecret= false;
 
   constructor() {
     setTimeout(() => {
@@ -36,11 +39,6 @@ export class ServersComponent implements OnInit {
   }
 
 
-
-
-
-
-
   // onUpdateNewUserName(updateNewName: any) {
   //   if (updateNewName.target.value.size > 0) {
   //     // this.allowNewName = true;
@@ -48,4 +46,20 @@ export class ServersComponent implements OnInit {
   //
   // }
 
+
+  getBaColor() {
+    let rgb = (Math.random() * 100000 ) + 100000;
+     return "#" + Math.ceil(rgb) ;
+  }
+
+  clickCounteMethod() {
+    this.clickCounter += 1;
+    this.logItem.push("Log id: " + this.clickCounter  + " || data: " + new  Date() + "\n");
+  }
+
+  onToggleDetails() {
+    this.showSecret = !this.showSecret;
+    this.logItem.push("log ID: " + this.logItem.length + 1 );
+
+  }
 }

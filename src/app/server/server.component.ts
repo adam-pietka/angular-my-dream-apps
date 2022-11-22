@@ -6,7 +6,9 @@ import {Component} from "@angular/core";
   styles: [`
     .online {
       color: white;
+      /*color: #864633;*/
     }
+
   `]
 })
 export class ServerComponent{

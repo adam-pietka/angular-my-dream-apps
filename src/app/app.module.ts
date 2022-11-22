@@ -6,6 +6,7 @@ import { ServersComponent } from './servers/servers.component';
 import {Warming_alertComponent} from "./warming_alert/warming_alert.component";
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import {FormsModule} from "@angular/forms";
+import { PracticeDirectivesComponent } from './practice-directives/practice-directives.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {FormsModule} from "@angular/forms";
         ServerComponent,
         ServersComponent,
         Warming_alertComponent,
-        SuccessAlertComponent
+        SuccessAlertComponent,
+        PracticeDirectivesComponent
     ],
     imports: [
         BrowserModule,
