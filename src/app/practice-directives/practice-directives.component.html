@@ -15,7 +15,7 @@
 
 <p>click counter is: {{logCounter}}</p>
 
-<p *ngFor="let logsItems of logArray"
+<p *ngFor="let logsItems of logArray; let i = index"
    [ngStyle]="{backgroundColor: logCounter >= 5 ? 'blue': 'transparent'}"
-   [ngClass]="{'over-five-logitems': logCounter >=5}"
+   [ngClass]="{'over-five-logitems': i >= 4}"
    >Log id: {{ logArray }}</p>

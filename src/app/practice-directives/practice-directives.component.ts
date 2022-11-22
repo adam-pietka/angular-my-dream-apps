@@ -18,6 +18,6 @@ export class PracticeDirectivesComponent implements OnInit {
   onClick() {
     this.showPassword = !this.showPassword ;
     this.logCounter = this.logCounter + 1;
-    this.logArray.push(this.logCounter)
+    this.logArray.push(this.logCounter + " " + new Date())
   }
 }
